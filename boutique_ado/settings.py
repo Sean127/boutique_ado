@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-06(7i0y_a099w(!m6*#x(jm^954w$jvqo@ma5b4zmach$lsi81
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-sean127-boutiqueado-y65lzjc0iw1.ws-eu102.gitpod.io']
+ALLOWED_HOSTS = ['8000-sean127-boutiqueado-y65lzjc0iw1.ws-eu103.gitpod.io']
 
 
 # Application definition
@@ -171,6 +171,10 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 FREE_DELIVERY_THRESHOLD = 50
 STANDARD_DELIVERY_PERCENTAGE = 10
+STRIPE_CURRENCY = 'usd'
+STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
+STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
